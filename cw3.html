@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Punkt P - Cwiczenie 3</title>
+	
+	
+</head>
+
+<body>
+
+	P = ( <input type="number" id="x"> , <input type="number" id="y"> )
+
+	<input type="submit" value="Sprawdz cwiartke" onclick="ktora_cwiartka()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function ktora_cwiartka()
+		{
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+			}
+			
+			if(x == 0 || y == 0){
+				document.getElementById("wynik").innerHTML = "Punkt lezy na jednej z osi ukladu"
+
+			}
+		
+			if(x == 0 && y == 0){
+				document.getElementById("wynik").innerHTML = "Punkt P=(0,0) jest poczatkiem ukladu wspolrzednych"
+
+			}
+			
+			if(x > 0 && y > 0){
+				document.getElementById("wynik").innerHTML = "Punkt znajduje sie w I cwiartce"
+
+			}
+			
+			if(x < 0 && y > 0){
+				document.getElementById("wynik").innerHTML = "Punkt znajduje sie w II cwiartc"
+
+			}
+			
+			if(x < 0 && y < 0){
+				document.getElementById("wynik").innerHTML = "Punkt znajduje sie w III cwiartce"
+
+			}
+			
+			if(x > 0 && y < 0){
+				document.getElementById("wynik").innerHTML = "Punkt znajduje sie w IV cwiartce"
+
+			}
+			
+	
+
+			
+		
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Dzien Tygodnia - Cwiczenie 1</title>
+	
+	
+</head>
+
+<body>
+
+	<label>
+		Podaj numer dnia <input type="number" id="input">
+	</label>
+	
+	<input type="submit" value="Pokaz nazwe dnia" onclick="getDayName()">
+	<div id="wynik"></div>
+	<script>
+	    function getDayName(){
+		const input = document.getElementById('input').value
+		const results = document.getElementById('wynik')
+
+			
+		if (input === '1') {
+			results.innerHTML = "Pierwszy dzień tygodnia to Monday - poniedziałek"
+            results.style.color = 'black'
+		} else if (input === '2') {
+			results.innerHTML = "Drugi dzień tygodnia to Tuesday - wtorek"
+            results.style.color = 'black'
+		} else if (input === '3') {
+			results.innerHTML = "Trzeci dzień tygodnia to Wednesday - środa"
+            results.style.color = 'black'
+		} else if (input === '4') {
+			results.innerHTML = "Czwarty dzień tygodnia to Thursday - czwartek"
+            results.style.color = 'black'
+		} else if (input === '5') {
+			results.innerHTML = "Piąty dzień tygodnia to Friday - piątek, piąteczek, piątunio"
+			results.style.color = 'yellow'
+		} else if (input === '6') {
+			results.innerHTML = "Szósty dzień tygodnia to Saturday - sobota"
+			results.style.color = 'green'
+		} else if (input === '7') {
+			results.innerHTML = "Siódmy dzień tygodnia to Sunday - niedziela"
+			results.style.color = 'green'
+		} else {
+			results.innerHTML = "Nie ma takiego dnia"
+			results.style.color = 'red'
+		}
+		}
+
+	</script>
+
+</body>
+</html>

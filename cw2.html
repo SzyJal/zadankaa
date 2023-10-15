@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Cwiczenie 2 - seans</title>
+	
+	
+</head>
+
+<body>
+
+	<label> Podaj imie: <input type="text" id="imie"> </label>
+	<label> Podaj wiek: <input type="number" id="wiek"> </label>
+	
+	<input type="submit" value="Sprawdz udzial" onclick="sprawdz()">
+
+	<div id="wynik"></div>
+	
+	<script>
+	
+		function sprawdz()
+		{
+			
+			const name = document.getElementById("imie").value;
+        const age = document.getElementById("wiek").value;
+        const results = document.getElementById("wynik");
+
+        if (age < 16) 
+		{
+          results.innerHTML = "Nie mozesz wziac udzialu w seansie, poniewaz jestes za mlody";
+        } else if (age >= 16 & age < 18)
+		 {
+          results.innerHTML = "Mozesz pojsc na seans ale z opiekunem, koszt biletu: 12zl";
+        } else if (age >= 18 & (name === "Morgan" || name === "Brad"))
+		 {
+          results.innerHTML = "Mozesz pojsc na seans za darmo";
+          results.style.color = 'green'
+        } else if (age >= 18)
+		 {
+          results.innerHTML = "Mozesz pojsc na seans, koszt biletu to 18 zl";
+      }
+		}
+	</script>
+</body>
+</html>
